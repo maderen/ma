@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+function mut() {
+var c=document.getElementById('t1').value;
+var d=document.getElementById('t2').value;
+    function mutation(arr) {
+        // 请把你的代码写在这里
+        var a = arr[0].toLowerCase(); //第一个字符串 转小写
+        var b = arr[1].toLowerCase(); //第二个字符串 转小写
+        alert(a+b);
+        //alert("你好，我是一个警告框！");
+        for (var i = 0; i < b.length; i++) {
+            if (a.indexOf('b[i]') == -1) { //如果第一个字符串中没有包含第二个字符串的某个字符时，表明第一个字符串不包括第二个字符串的所有字符，返回false;
+                // return false;
+                alert("第一个字符串不包含第二个字符串");
+                return false;
+            }
+        }
+        //return true;
+        alert("第一个字符串包含第二个字符串");
+        return true;
+    }
+    mutation([c, d]);
+}
+    </script>
+</head>
+<body >
+<div align="center">
+<input type="text" name="t1" id="t1">
+<input type="text" name="t2" id="t2">
+<button onclick="mut()">提交</button>
+</div>
+</body>
+</html>
